@@ -6,95 +6,17 @@
 <title>FMC-21 Fluency Marathon Challenge | C'mon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
---bg:#fff;--soft:#f3f6fb;--ink:#0b1b3a;--mute:#51607d;--navy:#0b1f4d;--navy2:#13306e;--blue:#2f6bff;--cyan:#22c7e8;--gold:#e8b44a;--line:#dde4f0;--card:#fff;--shadow:0 10px 30px rgba(11,31,77,.08)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1430;--soft:#0e1b3e;--ink:#eef2fb;--mute:#a6b3d1;--line:#22305a;--card:#101f47;--shadow:0 10px 30px rgba(0,0,0,.35)}}
-:root[data-theme="dark"]{--bg:#0a1430;--soft:#0e1b3e;--ink:#eef2fb;--mute:#a6b3d1;--line:#22305a;--card:#101f47;--shadow:0 10px 30px rgba(0,0,0,.35)}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
-*,*:before,*:after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
-h1,h2,h3{font-family:Sora,Inter,system-ui,sans-serif;line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em}
-h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.2rem}
-p{margin:0 0 1em;max-width:62ch}a{color:inherit}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-section{padding:84px 0}.soft{background:var(--soft)}
-.mute{color:var(--mute)}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;gap:22px;height:64px}
-.logo{font:800 1.4rem Sora,sans-serif;text-decoration:none;margin-right:auto}.logo i{color:var(--gold);font-style:normal}
-.nav a.l{text-decoration:none;font-size:.95rem;color:var(--mute)}.nav a.l:hover{color:var(--ink)}
-.btn{display:inline-block;text-decoration:none;font:600 1rem Inter,sans-serif;padding:14px 26px;border-radius:999px;border:2px solid transparent;cursor:pointer}
-.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
-.gold{background:var(--gold);color:#241a02}.gold:hover{filter:brightness(1.07)}
-.ghost{border-color:currentColor}.sm{padding:9px 20px;font-size:.92rem}
-.blue{background:var(--blue);color:#fff}
-.hero{background:radial-gradient(900px 400px at 80% -10%,rgba(34,199,232,.28),transparent),linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:96px 0 104px}
-.hero p{color:#c9d6f2}
-.pres{color:var(--cyan);font-weight:600;margin-bottom:10px}
-.hero h1{font-size:clamp(3.4rem,11vw,7rem);font-weight:800;margin:0}
-.hero h1 small{display:block;font-size:.3em;font-weight:600;letter-spacing:0;margin-top:.3em;color:#dfe8fb}
-.tag{font:600 clamp(1.3rem,3vw,1.9rem) Sora,sans-serif;color:var(--gold);margin:22px 0 14px}
-.row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
-.grid{display:grid;gap:18px}.g5{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:var(--shadow)}
-.card p{margin:0;color:var(--mute);font-size:.97rem}
-.card h3{margin-bottom:.3em}
-.lvl{position:relative;display:flex;flex-direction:column;gap:12px}
-.lvl .meta{font-weight:600;font-size:.93rem}
-.badge{align-self:flex-start;font-weight:600;font-size:.85rem;padding:5px 12px;border-radius:999px}
-.on{background:rgba(34,199,232,.16);color:#0a7a92}.off{background:rgba(232,180,74,.2);color:#8a6410}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .on{color:var(--cyan)}:root:not([data-theme="light"]) .off{color:var(--gold)}}
-.lvl.soon{opacity:.82}.lvl.soon:before{content:"COMING SOON";position:absolute;top:18px;right:-8px;background:var(--gold);color:#241a02;font:800 .72rem Sora,sans-serif;letter-spacing:.06em;padding:6px 14px;border-radius:6px 0 0 6px;transform:rotate(3deg)}
-.lvl .btn{margin-top:auto;text-align:center}
-.dis{border-color:var(--line);color:var(--mute)}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:22px 0}
-.facts div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
-.facts b{display:block;font:800 1.3rem Sora,sans-serif}.facts span{font-size:.88rem;color:var(--mute)}
-.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-weight:600;margin:6px 0 22px}
-.flow span{background:var(--soft);border:1px solid var(--line);padding:8px 16px;border-radius:999px}
-.flow em{color:var(--gold);font-style:normal}
-ul.ticks{list-style:none;padding:0;margin:0 0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px 24px}
-ul.ticks li:before{content:"✓";color:var(--blue);font-weight:800;margin-right:10px}
-.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:36px 0 26px;position:relative}
-.tl:before{content:"";position:absolute;left:12%;right:12%;top:15px;height:3px;background:linear-gradient(90deg,var(--cyan),var(--gold))}
-.tl div{text-align:center;position:relative;padding:0 6px}
-.tl i{display:block;width:32px;height:32px;border-radius:50%;background:var(--navy);border:4px solid var(--gold);margin:0 auto 12px}
-.tl b{display:block;font-family:Sora,sans-serif}.tl span{font-size:.9rem;color:var(--mute)}
-@media(max-width:620px){.tl{grid-template-columns:1fr;gap:20px}.tl:before{display:none}.nav a.l{display:none}}
-.big{font:800 clamp(1.3rem,3vw,1.8rem) Sora,sans-serif}
-details{border:1px solid var(--line);background:var(--card);border-radius:16px;margin-bottom:10px;padding:0 20px}
-summary{cursor:pointer;font-weight:600;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
-summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--blue);font-size:1.3rem;line-height:1}
-details[open] summary:after{content:"−"}details p{color:var(--mute);margin:0 0 16px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-@media(max-width:760px){.two{grid-template-columns:1fr}}
-.cert{background:linear-gradient(#fffdf6,#fbf3dc);color:#2a2410;border:6px double var(--gold);border-radius:12px;padding:30px 20px;text-align:center;box-shadow:var(--shadow)}
-.cert small{display:block;color:#7a6a30}.cert b{display:block;font:800 1.7rem Sora,sans-serif;color:var(--navy);margin:6px 0}
-.cert hr{border:0;border-top:1px solid #d9c27a;width:55%;margin:16px auto}
-.cta{background:linear-gradient(160deg,#07122e,var(--navy));color:#fff;text-align:center}
-.cta p{margin:0 auto 1em;color:#c9d6f2}
-.contact a{font-weight:600}
-footer{background:#07122e;color:#aebbd8;padding:42px 0;font-size:.93rem}
-footer b{color:#fff;font:800 1.3rem Sora,sans-serif;display:block}footer a{color:#aebbd8}
-#msg{display:none;position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--navy);color:#fff;padding:12px 20px;border-radius:12px;z-index:20;box-shadow:var(--shadow);max-width:90%}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-<header><div class="wrap nav">
-<a class="logo" href="#home">C'mon<i>.</i></a>
-<a class="l" href="#home">Home</a><a class="l" href="#about">About C'mon</a><a class="l" href="#fmc">FMC-21</a><a class="l" href="#levels">Levels</a><a class="l" href="#rules">Rules</a><a class="l" href="#faq">FAQ</a>
-<a class="btn gold sm join" href="#levels">Join FMC-21</a>
-</div></header>
-
+<body data-base="">
+<div id="site-header"></div>
 <main id="home">
 <section class="hero"><div class="wrap">
 <div class="pres">C'mon presents</div>
 <h1>FMC-21<small>Fluency Marathon Challenge</small></h1>
 <div class="tag">21 Days. One Stronger Voice.</div>
 <p>A 21-day English challenge to improve communication, reduce hesitation, build confidence and speak more fluently.</p>
-<div class="row"><a class="btn gold join" href="#levels">JOIN LEVEL 1 — ₹199</a><a class="btn ghost" href="#fmc">Explore FMC-21</a></div>
+<div class="row"><a class="btn gold" href="#levels">JOIN LEVEL 1 — ₹199</a><a class="btn ghost" href="#fmc">Explore FMC-21</a></div>
 </div></section>
 
 <section id="about"><div class="wrap">
@@ -116,7 +38,7 @@ footer b{color:#fff;font:800 1.3rem Sora,sans-serif;display:block}footer a{color
 <section id="levels"><div class="wrap">
 <h2>FMC-21 Levels</h2>
 <div class="grid g3">
-<div class="card lvl"><span class="badge on">🟢 Available now</span><h3>Level 1: Audio</h3><div class="meta">21 Days | 30 sec–2 min daily speaking | ₹199</div><p>Build your speaking habit, improve communication and overcome hesitation.</p><a class="btn gold join" href="#">JOIN LEVEL 1</a></div>
+<div class="card lvl"><span class="badge on">🟢 Available now</span><h3>Level 1: Audio</h3><div class="meta">21 Days | 30 sec–2 min daily speaking | ₹199</div><p>Build your speaking habit, improve communication and overcome hesitation.</p><a class="btn gold" data-join href="#">JOIN LEVEL 1</a></div>
 <div class="card lvl soon"><span class="badge off">🔒 Coming soon</span><h3>Level 2: Video</h3><div class="meta">21 Days | ₹299</div><p>Build camera confidence, body language, expressions and communication skills.</p><a class="btn ghost dis" href="mailto:cmon.connect@gmail.com?subject=Notify%20me%20-%20FMC-21%20Level%202">Notify Me</a></div>
 <div class="card lvl soon"><span class="badge off">🔒 Coming soon</span><h3>Level 3: Live</h3><div class="meta">5-Minute Live Speaking Challenge | ₹499</div><p>Develop spontaneous speaking, confidence, clarity and real-time communication.</p><a class="btn ghost dis" href="mailto:cmon.connect@gmail.com?subject=Notify%20me%20-%20FMC-21%20Level%203">Notify Me</a></div>
 </div></div></section>
@@ -126,7 +48,7 @@ footer b{color:#fff;font:800 1.3rem Sora,sans-serif;display:block}footer a{color
 <div class="facts"><div><b>21 Days</b><span>Duration</span></div><div><b>30 sec–2 min</b><span>Daily speaking</span></div><div><b>₹199</b><span>Fee</span></div><div><b>Yes</b><span>Certificate</span></div></div>
 <div class="flow"><span>Choose Topic</span><em>→</em><span>Prepare</span><em>→</em><span>Record</span><em>→</em><span>Submit</span><em>→</em><span>Repeat</span></div>
 <ul class="ticks"><li>Better communication</li><li>Less hesitation</li><li>More confidence</li><li>Better fluency</li><li>Clearer expression</li><li>Consistency</li></ul>
-<a class="btn gold join" href="#">JOIN LEVEL 1 — ₹199</a>
+<a class="btn gold" data-join href="#">JOIN LEVEL 1 — ₹199</a>
 </div></section>
 
 <section><div class="wrap">
@@ -169,7 +91,7 @@ footer b{color:#fff;font:800 1.3rem Sora,sans-serif;display:block}footer a{color
 <section class="cta"><div class="wrap">
 <h2>Ready to Find Your Voice?</h2>
 <p>21 days. Daily practice. One stronger voice.</p>
-<a class="btn gold join" href="#">JOIN FMC-21 LEVEL 1 — ₹199</a>
+<a class="btn gold" data-join href="#">JOIN FMC-21 LEVEL 1 — ₹199</a>
 </div></section>
 
 <section class="contact"><div class="wrap">
@@ -177,23 +99,10 @@ footer b{color:#fff;font:800 1.3rem Sora,sans-serif;display:block}footer a{color
 <p><b>Email:</b> <a href="mailto:cmon.connect@gmail.com">cmon.connect@gmail.com</a><br><b>Phone / WhatsApp:</b> <a href="https://wa.me/918948600298">8948600298</a></p>
 </div></section>
 </main>
-
-<footer><div class="wrap">
-<b>C'mon</b><em>Learning. Growing. Communicating.</em>
-<p style="margin-top:14px">C'mon presents FMC-21 — Fluency Marathon Challenge<br><a href="mailto:cmon.connect@gmail.com">cmon.connect@gmail.com</a> · <a href="https://wa.me/918948600298">8948600298</a></p>
-<span>© C'mon. All rights reserved.</span>
-</div></footer>
-<div id="msg" role="status">Registration link will be added soon. Please WhatsApp 8948600298 to join.</div>
-
-<script>
-// Paste your Google Form link between the quotes below. Every Level 1 button uses it.
-var FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeq_OS-rwbD4R6C2eccnadBB-IazNh4fiVDyGq9WOFqQc4uJg/viewform?usp=sharing&ouid=102802373408951022026";
-document.querySelectorAll(".join").forEach(function(a){
- if(a.getAttribute("href")==="#levels"&&!a.classList.contains("sm")&&a.textContent.indexOf("JOIN LEVEL 1")<0)return;
- if(a.classList.contains("sm")||a.textContent.indexOf("JOIN")<0)return;
- if(FORM_URL){a.href=FORM_URL;a.target="_blank";a.rel="noopener";}
- else{a.addEventListener("click",function(e){e.preventDefault();var m=document.getElementById("msg");m.style.display="block";setTimeout(function(){m.style.display="none"},4000)})}
-});
-</script>
+<div id="site-footer"></div>
+<div id="msg" role="status"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
