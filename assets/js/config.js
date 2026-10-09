@@ -1,18 +1,21 @@
-/* Site settings. Change values here, not in the HTML. */
+/* Site settings. Change values here, not in the HTML. Paths are relative to the site root. */
 window.FMC = {
-  FORM_URL: "",                       // paste your Google Form link between the quotes
+  FORM_URL: "",            // Google Form for FMC-21 Level 1 enrollment
+  FEEDBACK_FORM_URL: "",   // Google Form for reviews and feedback
   CONTACT: { email: "cmon.connect@gmail.com", phone: "8948600298", whatsapp: "918948600298" },
-  BRAND: { name: "C'mon", tagline: "Learning. Growing. Communicating." },
-  PROGRAMME: "FMC-21 — Fluency Marathon Challenge",
-  // Switch features on as you build them. Pages live in /pages.
+  BRAND: { name: "C'mon", tagline: "The little push", motto: "Learning. Growing. Communicating." },
+  LOGO: "assets/img/logo.png",
+  // Add real participant reviews here, for example:
+  // { name: "Asha", level: "FMC-21 Level 1", text: "I stopped dreading speaking." }
+  REVIEWS: [],
+  // Programmes shown in the footer. Add one line per new programme.
+  PROGRAMMES: [ { label: "FMC-21", href: "pages/fmc.html" } ],
   FEATURES: { payments: false, progress: false },
-  // Main navigation. Add an entry here to add a link everywhere.
   NAV: [
     { label: "Home", href: "index.html#home" },
-    { label: "About C'mon", href: "index.html#about" },
-    { label: "FMC-21", href: "index.html#fmc" },
-    { label: "Levels", href: "index.html#levels" },
-    { label: "Rules", href: "index.html#rules" },
-    { label: "FAQ", href: "index.html#faq" }
+    { label: "About", href: "index.html#about" },
+    { label: "Programmes", href: "index.html#programmes" },
+    { label: "Reviews", href: "index.html#reviews" },
+    { label: "Contact", href: "index.html#contact" }
   ]
 };
