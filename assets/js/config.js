@@ -12,10 +12,31 @@ window.FMC = {
   PROGRAMMES: [ { label: "FMC-21", href: "pages/fmc.html" } ],
   FEATURES: { payments: false, progress: false },
   NAV: [
-    { label: "Home", href: "index.html#home" },
     { label: "About", href: "index.html#about" },
-    { label: "Programmes", href: "index.html#programmes" },
-    { label: "Reviews", href: "index.html#reviews" },
-    { label: "Contact", href: "index.html#contact" }
+    { label: "Programme", href: "index.html#programmes" },
+    { label: "FAQs", href: "index.html#faq" },
+    { label: "Connect us", href: "index.html#connect" }
+  ],
+  SOCIAL: { Instagram: "", Facebook: "", LinkedIn: "" },   // paste your profile links
+  LEVELS: [
+    { id: 1, format: "Audio", fee: 199, days: 21, daily: "30 sec–2 min daily",
+      motive: "Build a daily speaking habit and lose the hesitation.",
+      intro: "Record a fresh audio clip on any topic every day for 21 days." },
+    { id: 2, format: "Video", fee: 299, days: 21, daily: "30 sec–2 min daily",
+      motive: "Gain confidence on camera: body language and expression.",
+      intro: "Same daily habit, now on video. Open to Level 1 certificate holders." },
+    { id: 3, format: "Live", fee: 499, days: 1, daily: "5-minute live talk",
+      motive: "Speak spontaneously and clearly under real pressure.",
+      intro: "A face-to-face talk on a topic we assign. Open to Level 2 certificate holders." }
+  ],
+  RULES: [
+    "I understand FMC-21 follows a strict no-miss rule.",
+    "I understand missing one submission can disqualify me from certification.",
+    "I understand the registration fee is non-refundable after registration.",
+    "I will submit my recording within the daily submission window.",
+    "I will submit original content recorded that day.",
+    "I will state the Day Number and Topic Name at the start of my recording.",
+    "I understand the challenge is conducted in English only.",
+    "I understand the eligibility requirements for Level 2 progression to Level 3."
   ]
 };
