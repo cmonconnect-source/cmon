@@ -6,6 +6,7 @@ Static website for GitHub Pages. No build step needed.
 
 ```
 index.html              Landing: about, programmes, FAQs, connect us
+  admin.html              Admin dashboard (not linked from the public site)
   app.html                Login, sign up, profile, enrolment, progress (hash routes)
 pages/
   fmc.html              Everything about FMC-21 (levels, journey, rules, certificate, FAQ)
@@ -18,6 +19,7 @@ assets/
   js/config.js          Form links, contact, nav, programmes, reviews, feature flags
   js/components.js      Shared header, footer, reviews section
   js/main.js            Startup for public pages
+  js/admin.js           Admin dashboard logic (roles, screens, audit log)
   js/app.js             Account area logic. Has a marked "data layer" to swap for a real backend
 ```
 
@@ -38,3 +40,7 @@ Upload everything in this folder to the root of the repository (keep the folders
 ## Prototype limits (read before launch)
 
 Sign up, login, OTP, enrolment, payment and progress run in the visitor's own browser (localStorage). That means data is not shared between devices, anyone can edit it, recordings are not uploaded, and the OTP is shown on screen. Before real launch you need a backend for: user accounts, real OTP (SMS or email), Razorpay payments with server-side verification, private file storage for recordings, and certificate emails.
+
+## Admin dashboard
+
+Open `/admin.html`. Demo logins: super@cmon.demo, prog@cmon.demo, eval@cmon.demo (password `demo1234`). These are NOT secure and the data is sample data plus this browser's own enrolments. Do not rely on it for real operations until it is connected to a backend with real authentication and server-side permission checks. Keep `admin.html` unlinked and consider protecting it behind your backend login.
